@@ -1,4 +1,5 @@
 import express from 'express';
+import './config/mongo.config.js';
 
 const app = express();
 

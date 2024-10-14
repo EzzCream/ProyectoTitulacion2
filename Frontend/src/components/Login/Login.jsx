@@ -5,7 +5,7 @@ export const Login = () => {
 		<div className="container-login">
 			<form className="form">
 				<h1 className="display-6">
-					<b>Sistema de administracion escolar</b>
+					<b>SAEAzteca</b>
 				</h1>
 				<div className="flex-column">
 					<label>Email </label>
