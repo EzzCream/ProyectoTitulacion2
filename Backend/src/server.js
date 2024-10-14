@@ -1,15 +1,19 @@
 import express from 'express';
 import './config/mongo.config.js';
+import { logger } from './config/log.config.js';
+import User from './routes/user.routes.js';
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use('/api/user', User);
+
 const PORT = process.env.PORT || 8080;
 const server = app.listen(PORT, () => {
-	console.log(`----------------------------------------------`);
-	console.log(`Server started on http://localhost:${PORT} ✨`);
-	console.log(`----------------------------------------------`);
+	logger.info(`----------------------------------------------`);
+	logger.info(`Server started on http://localhost:${PORT} ✨`);
+	logger.info(`----------------------------------------------`);
 });
-server.on('error', (err) => console.log(err));
+server.on('error', (err) => logger.error(err));
