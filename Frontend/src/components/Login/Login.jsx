@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useForm } from '../../hooks/useForm.js';
 import './Login.css';
 import { linkBack } from '../../helpers/global.js';
-import { useState } from 'react';
 
 export const Login = () => {
 	const { userId, password, form, inputChange } = useForm({
