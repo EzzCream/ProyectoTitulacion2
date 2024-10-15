@@ -1,22 +1,20 @@
 import axios from 'axios';
 import { useForm } from '../../hooks/useForm.js';
 import './Login.css';
+import { linkBack } from '../../helpers/global.js';
+import { useState } from 'react';
 
 export const Login = () => {
-	const { email, password, form, inputChange } = useForm({
-		email: '',
+	const { userId, password, form, inputChange } = useForm({
+		userId: '',
 		password: '',
 	});
 
 	async function validate(e) {
 		e.preventDefault();
-		console.log(form);
 		try {
-			const validate = await axios.post(
-				'http://localhost:8080/api/user/login/',
-				form,
-			);
-			console.log(validate);
+			const user = await axios.post(linkBack + '/api/user/login', form);
+			console.log(user);
 		} catch (error) {
 			console.log(error);
 		}
@@ -29,7 +27,7 @@ export const Login = () => {
 					<b>SAEAzteca</b>
 				</h1>
 				<div className="flex-column">
-					<label>Email </label>
+					<label>userId</label>
 				</div>
 				<div className="inputForm">
 					<svg
@@ -43,11 +41,11 @@ export const Login = () => {
 						</g>
 					</svg>
 					<input
-						placeholder="Email"
+						placeholder="userId"
 						className="input"
-						type="email"
-						name="email"
-						value={email}
+						type="text"
+						name="userId"
+						value={userId}
 						onChange={inputChange}
 					/>
 				</div>

@@ -6,7 +6,7 @@ const router = Router();
 router.post('/signup', User.signup);
 router.post('/login', User.login);
 router.get('/ayuda', (req, res) => {
-	res.send('Ayuda');
+	res.send('Ayudaaaaa');
 });
 
 export default router;
