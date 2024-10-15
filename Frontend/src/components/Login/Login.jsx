@@ -1,6 +1,27 @@
+import axios from 'axios';
+import { useForm } from '../../hooks/useForm.js';
 import './Login.css';
 
 export const Login = () => {
+	const { email, password, form, inputChange } = useForm({
+		email: '',
+		password: '',
+	});
+
+	async function validate(e) {
+		e.preventDefault();
+		console.log(form);
+		try {
+			const validate = await axios.post(
+				'http://localhost:8080/api/user/login/',
+				form,
+			);
+			console.log(validate);
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
 	return (
 		<div className="container-login">
 			<form className="form">
@@ -22,9 +43,12 @@ export const Login = () => {
 						</g>
 					</svg>
 					<input
-						placeholder="Enter your Email"
+						placeholder="Email"
 						className="input"
-						type="text"
+						type="email"
+						name="email"
+						value={email}
+						onChange={inputChange}
 					/>
 				</div>
 
@@ -42,16 +66,21 @@ export const Login = () => {
 						<path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path>
 					</svg>
 					<input
-						placeholder="Enter your Password"
+						placeholder="Password"
 						className="input"
 						type="password"
+						name="password"
+						value={password}
+						onChange={inputChange}
 					/>
 				</div>
 
 				<div className="flex-row">
 					<span className="span">Forgot password?</span>
 				</div>
-				<button className="button-submit">Sign In</button>
+				<button className="button-submit" onClick={validate}>
+					Sign In
+				</button>
 			</form>
 		</div>
 	);

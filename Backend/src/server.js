@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import './config/mongo.config.js';
 import { logger } from './config/log.config.js';
 import User from './routes/user.routes.js';
@@ -7,6 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use('/api/user', User);
 
