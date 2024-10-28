@@ -26,7 +26,7 @@ export const Login = () => {
 					<b>SAEAzteca</b>
 				</h1>
 				<div className="flex-column">
-					<label>userId</label>
+					<label>Usuario</label>
 				</div>
 				<div className="inputForm">
 					<svg
@@ -40,7 +40,7 @@ export const Login = () => {
 						</g>
 					</svg>
 					<input
-						placeholder="userId"
+						placeholder="Usuario"
 						className="input"
 						type="text"
 						name="userId"
