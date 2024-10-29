@@ -6,7 +6,6 @@ import { Navigate } from 'react-router-dom';
 
 export const Land = () => {
 	const { user } = useContext(User);
-	console.log(user.userLogged.subjects);
 	let i = 1;
 
 	if (user.length === 0) {
