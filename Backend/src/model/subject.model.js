@@ -13,4 +13,8 @@ const Schema = new mongoose.Schema({
 		type: String,
 		require: true,
 	},
+	timePlace: {
+		type: Array,
+		require: true,
+	},
 });

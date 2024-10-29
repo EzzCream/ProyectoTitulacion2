@@ -27,17 +27,18 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
 	try {
 		const { userId, password } = req.body;
-		console.log(userId);
 		const user = await UserModel.findOne({ userId });
+		console.log(user);
 		if (user) {
 			const isValid = await bcrypt.compare(password, user.password, null);
 			if (isValid) {
 				const userLogged = {
 					userId: user.userId,
 					name: user.name,
+					subjects: user.subjects,
 				};
 				jwt.sign({ userLogged }, 'secretKey', (err, token) => {
-					res.status(202).json({
+					res.status(202).send({
 						token,
 						userLogged,
 					});

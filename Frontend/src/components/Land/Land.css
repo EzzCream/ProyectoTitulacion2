@@ -5,6 +5,13 @@
 	flex-direction: column;
 	height: 90vh;
 }
+.cards {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+}
 .card {
 	position: relative;
 	display: flex;
@@ -63,4 +70,5 @@
 }
 .card:hover .content {
 	color: #ffffff;
+	cursor: pointer;
 }

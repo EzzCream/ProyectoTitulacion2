@@ -2,21 +2,38 @@ import axios from 'axios';
 import { useForm } from '../../hooks/useForm.js';
 import './Login.css';
 import { linkBack } from '../../helpers/global.js';
+import { useContext, useState } from 'react';
+import User from '../../context/Provider.jsx';
+import { Navigate } from 'react-router-dom';
 
 export const Login = () => {
+	const { setUser } = useContext(User);
+
 	const { userId, password, form, inputChange } = useForm({
 		userId: '',
 		password: '',
 	});
 
+	const [login, setLogin] = useState(true);
+	const [navigate, setNavigate] = useState(false);
+
 	async function validate(e) {
 		e.preventDefault();
 		try {
-			const user = await axios.post(linkBack + '/api/user/login', form);
-			console.log(user);
+			const body = await axios.post(linkBack + '/api/user/login', form);
+			if (body.status === 204) {
+				setLogin(false);
+			} else {
+				setUser(body.data);
+				setNavigate(true);
+			}
 		} catch (error) {
 			console.log(error);
 		}
+	}
+
+	if (navigate) {
+		return <Navigate to="/inicio" />;
 	}
 
 	return (
@@ -71,7 +88,11 @@ export const Login = () => {
 						onChange={inputChange}
 					/>
 				</div>
-
+				{!login ? (
+					<p style={{ color: 'red' }}>Correo o password invalido</p>
+				) : (
+					''
+				)}
 				<div className="flex-row">
 					<span className="span">Forgot password?</span>
 				</div>

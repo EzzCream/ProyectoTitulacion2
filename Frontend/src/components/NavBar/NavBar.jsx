@@ -6,7 +6,6 @@ export const NavBar = () => {
 					<span className="navbar-brand mb-0 h1">SAEAzteca</span>
 				</div>
 			</nav>
-			;
 		</div>
 	);
 };
