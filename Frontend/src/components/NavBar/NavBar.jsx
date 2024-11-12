@@ -4,11 +4,11 @@ import './NavBar.css';
 export const NavBar = () => {
 	return (
 		<div>
-			<Link to={'inicio'} className="navbar bg-body-tertiary link">
-				<div className="container-fluid">
+			<div className="container-fluid">
+				<Link to={'inicio'} className="navbar bg-body-tertiary link">
 					<span className="navbar-brand mb-0 h1">SAEAzteca</span>
-				</div>
-			</Link>
+				</Link>
+			</div>
 		</div>
 	);
 };

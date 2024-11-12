@@ -3,7 +3,7 @@ import './Subject.css';
 export const Subject = () => {
 	return (
 		<div className="subject-container">
-			<div className="sidebar">
+			{/* <div className="sidebar">
 				<p className="lead fw-normal option">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +30,7 @@ export const Subject = () => {
 					</svg>{' '}
 					Comentarios
 				</p>
-			</div>
+			</div> */}
 			<div className="content-subject">
 				<h2 className="display-6 mb-5">Materia</h2>
 				<div className="general-materia">
