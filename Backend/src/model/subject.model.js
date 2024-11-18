@@ -17,4 +17,10 @@ const Schema = new mongoose.Schema({
 		type: Array,
 		require: true,
 	},
+	info: {
+		type: String,
+		require: true,
+	},
 });
+
+export const SubjectModel = model('subject', Schema);
