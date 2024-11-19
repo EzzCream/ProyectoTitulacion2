@@ -72,3 +72,26 @@
 	gap: 10px;
 	width: 300px;
 }
+.cont-cal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+.cal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	.num {
+		background-color: #e8e8e8;
+		width: 30px;
+		height: 30px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: 50%;
+	}
+}

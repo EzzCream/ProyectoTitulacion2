@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import './Subject.css';
+import { Contenido } from '../Contenido/Contenido.jsx';
 
 export const Subject = () => {
 	return (
@@ -17,6 +19,16 @@ export const Subject = () => {
 					</div>
 					<div className="card-materia">
 						<h2>Acerca de la materia</h2>
+						<div className="cont-cal">
+							<h6>Calificaciones</h6>
+							<div className="cal">
+								<div className="num">10</div>
+								<div className="num">-</div>
+								<div className="num">-</div>
+								<div className="num">-</div>
+								<div className="num">-</div>
+							</div>
+						</div>
 						<p>
 							Lorem ipsum dolor, sit amet consectetur adipisicing
 							elit. Aspernatur quod fuga harum voluptatibus
@@ -30,7 +42,9 @@ export const Subject = () => {
 							eveniet odit hic.
 						</p>
 						<div className="botones">
-							<button className="btn">Contenido</button>
+							<Link to={'/contenido'} className="btn">
+								Contenido
+							</Link>
 							<button className="btn">Material ayuda</button>
 						</div>
 					</div>

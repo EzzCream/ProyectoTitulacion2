@@ -1,0 +1,25 @@
+.section-tra {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	.card-tra {
+		margin-top: 50px;
+		width: 300px;
+		height: 400px;
+		background-color: #f7f7f7;
+		text-align: center;
+		padding: 20px;
+		border-radius: 20px;
+		border: 1px solid rgba(0, 0, 255, 0);
+	}
+	.card-tra:hover {
+		border: 1px solid blue;
+		transition: 0.5s;
+	}
+}
+.gen-cont {
+	text-align: center;
+	padding-top: 50px;
+}

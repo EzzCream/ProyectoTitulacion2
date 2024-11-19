@@ -11,7 +11,10 @@ export const NavBar = () => {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light bg-light">
 			<div className="container-fluid">
-				<Link to={'inicio'} className="navbar bg-body-tertiary link">
+				<Link
+					to={'universidad'}
+					className="navbar bg-body-tertiary link"
+				>
 					<span className="navbar-brand mb-0 h1">SAEAzteca</span>
 				</Link>
 				<button
@@ -27,16 +30,37 @@ export const NavBar = () => {
 				</button>
 				<div className="collapse navbar-collapse" id="navbarNav">
 					<ul className="navbar-nav">
-						{/* <li className="nav-item">
+						<li className="nav-item">
 							<Link
 								to={'inicio'}
 								className="navbar bg-body-tertiary link"
 							>
 								<span className="navbar-brand mb-0 ">
-									Alumno
+									Materias
 								</span>
 							</Link>
-						</li> */}
+						</li>
+						<li className="nav-item">
+							<Link
+								to={'tramites'}
+								className="navbar bg-body-tertiary link"
+							>
+								<span className="navbar-brand mb-0 ">
+									Tramites
+								</span>
+							</Link>
+						</li>
+						<li className="nav-item">
+							<Link
+								to={'pagos'}
+								className="navbar bg-body-tertiary link"
+							>
+								<span className="navbar-brand mb-0 ">
+									Pagos
+								</span>
+							</Link>
+						</li>
+						{/* Info */}
 						<li className="nav-item nombre">
 							<Link
 								to={'general'}
