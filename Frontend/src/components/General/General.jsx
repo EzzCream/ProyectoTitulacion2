@@ -32,6 +32,42 @@ export const General = () => {
 					<p className="mb-0">Materias no aprobadas: 0</p>
 					<p className="mb-0">Avance: 33.33%</p>
 				</section>
+				<section className="info">
+					<h2>Pagos</h2>
+
+					<p className="mb-0">
+						Pagos pendientes: No hay pagos pendientes
+					</p>
+					<p className="mb-0">Ultimos abonos:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>Fecha</td>
+								<td>Concepto</td>
+								<td>Monto</td>
+							</tr>
+							<tr>
+								<td>09/12/2024</td>
+								<td>Colegiatura</td>
+								<td>$ 1500</td>
+							</tr>
+						</tbody>
+					</table>
+					<p className="mb-0 mt-2">Proximo pago:</p>
+					<table>
+						<tbody>
+							<tr>
+								<td>Fecha limite</td>
+								<td>Monto</td>
+							</tr>
+							<tr>
+								<td>20/12/2024</td>
+								<td>$ 1500</td>
+							</tr>
+						</tbody>
+					</table>
+					<button className="btn boton">Pagar</button>
+				</section>
 			</section>
 			<section className="second-cont">
 				<h2>Historial academico</h2>

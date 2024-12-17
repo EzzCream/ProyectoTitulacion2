@@ -1,0 +1,21 @@
+.cont-pagos {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 20px;
+}
+.prox-pagos {
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	td {
+		border: 1px solid rgb(156, 156, 156);
+		padding: 5px;
+	}
+}

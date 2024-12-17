@@ -21,6 +21,10 @@ const Schema = new mongoose.Schema({
 		type: String,
 		require: true,
 	},
+	contenidoId: {
+		type: String,
+		require: true,
+	},
 });
 
 export const SubjectModel = model('subject', Schema);

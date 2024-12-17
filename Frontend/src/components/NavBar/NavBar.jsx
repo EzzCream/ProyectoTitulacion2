@@ -50,7 +50,7 @@ export const NavBar = () => {
 								</span>
 							</Link>
 						</li>
-						<li className="nav-item">
+						{/* <li className="nav-item">
 							<Link
 								to={'pagos'}
 								className="navbar bg-body-tertiary link"
@@ -59,7 +59,7 @@ export const NavBar = () => {
 									Pagos
 								</span>
 							</Link>
-						</li>
+						</li> */}
 						{/* Info */}
 						<li className="nav-item nombre">
 							<Link
